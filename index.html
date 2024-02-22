@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Valentine's Day</title>
+
+    <style>
+        body{
+            background-color: rgb(42, 0, 0);
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 600px;
+            height: 600px;   
+            border-radius: 40px;
+            text-align: center;
+            padding-top: 80px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 25px;
+        }
+        #yes{
+            position: absolute;
+            height: 50px;
+            width: 70px;
+            background-color: red;
+            border:2px solid white;
+            border-radius: 10px;
+            color: white;
+        }
+       
+
+
+        #no{
+            position: relative;
+            height: 50px;
+            width: 70px;
+            background-color: red;
+            border:2px white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 100px;
+            margin-bottom: 30px;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1>Happy Valentine's Day</h1>
+        <h5> Would you like to play CSGO tonight ? ?</h5>
+    
+        
+        <a href="https://www.youtube.com/shorts/QDPpgIc8jEU"><button id="yes"> Yes </button>
+        <button onmouseover="fuja()" id="no"> No </button>
+
+        <img src="https://media1.giphy.com/media/bkazyJ9aEqbWwxq0V6/giphy.gif?cid=ecf05e47imycn8uaw7gutfjokvw0fp2pm0m73lusnm2fcp1r&ep=v1_gifs_related&rid=giphy.gif&ct=g">
+
+    </div>
+
+  <script>
+function fuja(){
+   
+            var botaoNo = document.getElementById("no")
+
+            const larguraJanela = window.innerWidth;
+            const alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNo.offsetWidth;
+            var maxY = alturaJanela - botaoNo.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNo.style.left = aleatorioX + "px";
+            botaoNo.style.top = aleatorioY + "px";
+            console.log(aleatorioX)
+            
+}
+  </script>
+  
+    
+
+
+    
+    
+</body>
+</html>
